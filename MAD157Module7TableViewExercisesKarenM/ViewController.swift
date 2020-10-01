@@ -7,7 +7,7 @@
 //
 
 //******************************************************************
-//***..  Part 3 - TableViewAppWithAlert
+//***..  Part 4 - GroupedTableViewApp
 //******************************************************************
 
 import UIKit
@@ -17,8 +17,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var petTable: UITableView!
     
     let petArray = ["cat", "dog", "parakeet", "parrot", "canary", "finch", "tropical fish", "goldfish", "sea horses", "hamster", "gerbil", "rabbit", "turtle", "snake", "lizard", "hermit crab"]
-    
-    let cellID = "cellID"
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,14 +32,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
-        if (cell == nil ) {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: cellID)
-       }
-        
-       cell?.textLabel?.text = petArray[indexPath.row]
+        //.. use this if defining visually with storyboard and inspector identifier with "cellID"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")
+        cell?.textLabel?.text = petArray[indexPath.row]
         return cell!
+        //.. use this if defining without visual (ie. no prototype cell on story board)
+        //..
+//..  let cellID = "cellID" // --> in Class and
+//        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+//        if (cell == nil ) {
+//            cell = UITableViewCell(style: UITableViewCell.CellStyle.default,reuseIdentifier: cellID)
+//        }
+//        cell?.textLabel?.text = petArray[indexPath.row]
+//        return cell!
+
     }
     
     func tableView( _ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
