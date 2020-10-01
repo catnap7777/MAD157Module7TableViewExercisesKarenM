@@ -16,13 +16,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
    
     @IBOutlet var petTable: UITableView!
     
-    //.. without trying to use sections
+    //.. WITHOUT using sections
 //    let petArray = ["cat", "dog", "parakeet", "parrot", "canary", "finch", "tropical fish", "goldfish", "sea horses", "hamster", "gerbil", "rabbit", "turtle", "snake", "lizard", "hermit crab"]
     
-    //.. with using sections
+    //.. WITH using sections .. multi-dimentional array
     let petArray = [["Mammal", "cat", "dog", "hamster", "gerbil", "rabbit"], ["Bird", "parakeet", "parrot", "canary", "finch"], ["Fish", "tropical fish", "goldfish", "sea horses"], ["Reptile", "turtle", "snake", "lizard"]]
-    
-    let cellID = "cellID"
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        //.. WITHOUT sections
 //        return petArray.count
         //.. When determining the number of rows in each section, we need to subtract 1 because the section header appears at the beginning of each array.
         return petArray[section].count - 1
@@ -41,22 +40,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //.. use this if defining visually with storyboard and inspector identifier with "cellID"
+        //.. use this if defining WITH VISUALLY ON STORYBOARD and inspector identifier with "cellID"
         //.. since the first element of each array contains a section header, we need to skip over this header by adding 1 to the array index like this line,
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")
-////        cell?.textLabel?.text = petArray[indexPath.row]
-////        cell?.textLabel?.text = petArray[indexPath.row + 1]
-//        return cell!
-        //.. use this if defining without visual (ie. no prototype cell on story board)
-        //..
-//..  let cellID = "cellID" // --> in Class and
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
-        if (cell == nil ) {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.default,reuseIdentifier: cellID)
-        }
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")
+        //.. WITHOUT sections
+//        cell?.textLabel?.text = petArray[indexPath.row]
+        //.. WITH sections
         cell?.textLabel?.text = petArray[indexPath.section][indexPath.row + 1]
         return cell!
+        
+//        //.. use this if defining WITHOUT VISUALLY ON STORYBOARD (ie. no prototype cell on story board)
+//        //..
+////..  let cellID = "cellID" // --> in Class and
+//        var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+//        if (cell == nil ) {
+//            cell = UITableViewCell(style: UITableViewCell.CellStyle.default,reuseIdentifier: cellID)
+//        }
+//
+//        cell?.textLabel?.text = petArray[indexPath.section][indexPath.row + 1]
+//        return cell!
 
     }
     
@@ -64,7 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //..since the first element of each array contains a section header, we need to skip over this header by adding 1 to the array index like this line...
         //.. we need to identify the item the user tapped on with this code
-
+//        //.. WITHOUT sections
 //        let selectedItem = petArray[indexPath.row]
         let selectedItem = petArray[indexPath.section][indexPath.row + 1]
 
@@ -79,6 +81,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.present(alert, animated: true , completion: nil )
     }
     
+    //.. additional 2 functions needed if using sections
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return petArray[section][0]
     }
