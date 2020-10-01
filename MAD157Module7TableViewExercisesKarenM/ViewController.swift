@@ -6,6 +6,10 @@
 //  Copyright © 2020 TygerMatrix Software. All rights reserved.
 //
 
+//******************************************************************
+//***..  Part 2 - TableViewVisualApp
+//******************************************************************
+
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -17,7 +21,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
 
     }
-
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return petArray.count
