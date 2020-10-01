@@ -21,6 +21,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //.. WITH using sections .. multi-dimentional array
     let petArray = [["Mammal", "cat", "dog", "hamster", "gerbil", "rabbit"], ["Bird", "parakeet", "parrot", "canary", "finch"], ["Fish", "tropical fish", "goldfish", "sea horses"], ["Reptile", "turtle", "snake", "lizard"]]
+    
+    //.. for using an index - NOTE:
+    //let indexArray = ["B", "F", "M", "R"]
+    let indexArray = ["🐶","🦆", "🐠", "🐍"]
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         petTable.delegate = self
         petTable.dataSource = self
+        petTable.sectionIndexColor = UIColor.white
+        petTable.sectionIndexBackgroundColor = UIColor.black
+        petTable.sectionIndexTrackingBackgroundColor = UIColor.darkGray
         
     }
 
@@ -81,7 +88,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.present(alert, animated: true , completion: nil )
     }
     
-    //.. additional 2 functions needed if using sections
+    //.. additional 3 functions needed if using sections and indexes
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return petArray[section][0]
     }
@@ -89,6 +96,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         return petArray.count
     }
+    
+    func sectionIndexTitles (for tableView: UITableView) -> [String]? {
+        return indexArray
+    }
+
 
 }
 
