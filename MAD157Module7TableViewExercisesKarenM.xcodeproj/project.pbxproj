@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		3A6D70BE252615AD00E291C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D70BD252615AD00E291C3 /* AppDelegate.swift */; };
 		3A6D70C0252615AD00E291C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D70BF252615AD00E291C3 /* SceneDelegate.swift */; };
-		3A6D70C2252615AD00E291C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D70C1252615AD00E291C3 /* ViewController.swift */; };
 		3A6D70C5252615AD00E291C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6D70C3252615AD00E291C3 /* Main.storyboard */; };
 		3A6D70C8252615AD00E291C3 /* MAD157Module7TableViewExercisesKarenM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D70C6252615AD00E291C3 /* MAD157Module7TableViewExercisesKarenM.xcdatamodeld */; };
 		3A6D70CA252615B200E291C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A6D70C9252615B200E291C3 /* Assets.xcassets */; };
 		3A6D70CD252615B200E291C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6D70CB252615B200E291C3 /* LaunchScreen.storyboard */; };
+		3A6D70D72526AA8100E291C3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6D70D62526AA8100E291C3 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A6D70BA252615AD00E291C3 /* MAD157Module7TableViewExercisesKarenM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAD157Module7TableViewExercisesKarenM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6D70BD252615AD00E291C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A6D70BF252615AD00E291C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A6D70C1252615AD00E291C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A6D70C4252615AD00E291C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A6D70C7252615AD00E291C3 /* MAD157Module7TableViewExercisesKarenM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MAD157Module7TableViewExercisesKarenM.xcdatamodel; sourceTree = "<group>"; };
 		3A6D70C9252615B200E291C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A6D70CC252615B200E291C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A6D70CE252615B200E291C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A6D70D62526AA8100E291C3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				3A6D70BD252615AD00E291C3 /* AppDelegate.swift */,
 				3A6D70BF252615AD00E291C3 /* SceneDelegate.swift */,
-				3A6D70C1252615AD00E291C3 /* ViewController.swift */,
+				3A6D70D62526AA8100E291C3 /* TableViewController.swift */,
 				3A6D70C3252615AD00E291C3 /* Main.storyboard */,
 				3A6D70C9252615B200E291C3 /* Assets.xcassets */,
 				3A6D70CB252615B200E291C3 /* LaunchScreen.storyboard */,
@@ -141,10 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A6D70C2252615AD00E291C3 /* ViewController.swift in Sources */,
 				3A6D70BE252615AD00E291C3 /* AppDelegate.swift in Sources */,
 				3A6D70C8252615AD00E291C3 /* MAD157Module7TableViewExercisesKarenM.xcdatamodeld in Sources */,
 				3A6D70C0252615AD00E291C3 /* SceneDelegate.swift in Sources */,
+				3A6D70D72526AA8100E291C3 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
